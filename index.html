@@ -476,7 +476,7 @@ html :focus:not(:focus-visible){outline:none}
     </div>
   </div>
   <div class="stage" id="stage">
-    <div class="vwrap"><video id="brotVideo" muted playsinline preload="none" disablepictureinpicture aria-label="Aus Mehl wird Teig, aus Teig ein goldenes Brot, gefüllt mit Kebab" data-i18n-aria="valt"></video></div>
+    <div class="vwrap"><video id="brotVideo" muted playsinline preload="none" disablepictureinpicture aria-label="Pide auf der Holzschaufel vor dem Holzofen, daneben der Drehspiess" data-i18n-aria="valt"></video></div>
     <div class="tag"><span class="tr" data-i18n="warm1">Ofenwarm</span><span class="gl" data-i18n="warm">jeden Tag frisch gebacken</span></div>
   </div>
 </section>
@@ -640,7 +640,7 @@ html :focus:not(:focus-visible){outline:none}
     de:{hello:"Färbergasse 7 · Altstadt Lindwil",claim:'Kebab im Hausbrot, <em>bei uns im Ofen gebacken.</em>',
       n1:"Karte",n2:"Zeiten",n3:"Gäste",n4:"Anfahrt",navAria:"Seite",
       route:"Route",route2:"Route planen",reviews:"946 Bewertungen",warm1:"Ofenwarm",warm:"jeden Tag frisch gebacken",enjoy:"En Guete!",e4:"Was Gäste sagen",
-      valt:"Aus Mehl wird Teig, aus Teig ein goldenes Brot, gefüllt mit Kebab",
+      valt:"Pide auf der Holzschaufel vor dem Holzofen, daneben der Drehspiess",
       e1:"Unsere Spezialitäten",h2a:"Das mögen unsere Gäste",
       c1h:"Hausgemachtes Brot",c1p:"Aussen knusprig, innen weich – jeden Morgen bei uns gebacken.",c1m:"Im Hausbrot ab CHF 12.00",
       c2h:"Kebab vom Drehspiess",c2p:"Poulet oder Kalb vom Drehspiess – im Hausbrot, als Dürüm oder auf dem Teller.",c2m:"Narhof-Spezial: 8 Sorten",
@@ -662,7 +662,7 @@ html :focus:not(:focus-visible){outline:none}
     en:{hello:"Färbergasse 7 · Lindwil Old Town",claim:'Kebab in house bread, <em>baked in our own oven.</em>',
       n1:"Menu",n2:"Hours",n3:"Reviews",n4:"Find us",navAria:"Page",
       route:"Route",route2:"Get directions",reviews:"946 reviews",warm1:"Oven-warm",warm:"freshly baked every day",enjoy:"Enjoy your meal!",e4:"What guests say",
-      valt:"Flour becomes dough, dough becomes golden bread, filled with kebab",
+      valt:"Pide on a wooden peel in front of the wood oven, the rotisserie beside it",
       e1:"Our specialities",h2a:"What our guests love",
       c1h:"Homemade bread",c1p:"Crisp outside, soft inside – baked here every morning.",c1m:"In house bread from CHF 12.00",
       c2h:"Kebab from the spit",c2p:"Chicken or veal from the spit – in house bread, as a dürüm or on a plate.",c2m:"Narhof specials: 8 kinds",
@@ -759,8 +759,8 @@ html :focus:not(:focus-visible){outline:none}
   function finish(){ if(done) return; done=true; root.classList.add('baked'); }
   setTimeout(function(){root.classList.add('ready')},reduce?0:900);
   var small=window.matchMedia('(max-width:620px)').matches&&!window.matchMedia('(orientation:landscape) and (max-height:520px)').matches;
-  var base='video/brot_'+(small?'hoch':'quer');
-  var VER='?v=13';   // bei jedem neuen Film hochzählen, sonst zeigt der Browser den alten aus dem Zwischenspeicher
+  var base='video/narhof_'+(small?'hoch':'quer');
+  var VER='?v=20';   // bei jedem neuen Film hochzählen, sonst zeigt der Browser den alten aus dem Zwischenspeicher
   vid.poster=base+'.jpg'+VER;
   var conn=navigator.connection||{},save=!!conn.saveData;
   function tryPlay(){ var p=vid.play(); if(p&&p.catch) p.catch(function(){ if(vid.currentTime===0) showEnd(); finish(); }); }
